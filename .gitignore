@@ -1,0 +1,16 @@
+
+# Ignorar archivos generados por NetBeans
+nbproject/private/
+build/
+dist/
+*.class
+*.jar
+*.log
+
+# Ignorar archivos de configuración del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Ignorar dependencias de librerías externas (si usan Maven)
+target/
+*.iml
