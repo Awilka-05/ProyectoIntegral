@@ -8,6 +8,6 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>17</maven.compiler.release>
-        <exec.mainClass>com.mycompany.calculadorrutaautobus.CalculadorRutaAutobus</exec.mainClass>
+        <exec.mainClass>com.proyecto.rutas.frontend.VentanaPrincipal.java</exec.mainClass>
     </properties>
 </project>

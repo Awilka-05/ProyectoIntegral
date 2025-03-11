@@ -1,13 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.proyecto.rutas.backend;
 
-/**
- *
- * @author ofloo
- */
 public class ConsumoCombustible {
     
+    public static double calcularConsumo(double distancia, double consumoPorKm, int pasos) {
+        return ServicioCalculo.integrarConsumo(distancia, consumoPorKm, pasos);
+    }
 }
