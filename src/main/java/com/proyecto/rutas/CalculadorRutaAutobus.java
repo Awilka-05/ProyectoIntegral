@@ -1,16 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
 package com.proyecto.rutas;
 
-/**
- *
- * @author ofloo
- */
-public class CalculadorRutaAutobus {
+import com.proyecto.rutas.backend.ConsumoCombustible;
+import com.proyecto.rutas.backend.ConsumoEnergia;
 
+public class CalculadorRutaAutobus {/*
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-    }
+        double distancia = 150.0; // km
+        int pasos = 1000; // Precisión de la integración
+
+        double resultadoCombustible = ConsumoCombustible.calcularConsumo(distancia, pasos);
+        System.out.println("Consumo de combustible estimado: " + resultadoCombustible + " litros");
+
+        double resultadoEnergia = ConsumoEnergia.calcularConsumo(distancia, pasos);
+        System.out.println("Consumo de energía estimado: " + resultadoEnergia + " kWh");
+    }*/
 }
