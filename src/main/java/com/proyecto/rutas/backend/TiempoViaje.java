@@ -9,14 +9,15 @@ package com.proyecto.rutas.backend;
  * @author ofloo
  */
 public class TiempoViaje {
-           public double calcularTiempo(double distanciaTotal, int numTrapecios) {
-        double tiempoMaximoEstimado = Math.sqrt(distanciaTotal);
+           public double calcularTiempo(double distanciaTotal , int numTrapecios) {
+               double dist = distanciaTotal * 1000;
+        double tiempoMaximoEstimado = Math.sqrt(dist);
         double deltaT = tiempoMaximoEstimado / numTrapecios;
         double distanciaCalculada = 0;
         int iteraciones = 0;
         final int MAX_ITERACIONES = 10000;
 
-        while (Math.abs(distanciaCalculada - distanciaTotal) > 0.001 && iteraciones < MAX_ITERACIONES) {
+        while (Math.abs(distanciaCalculada - dist) > 0.001 && iteraciones < MAX_ITERACIONES) {
             distanciaCalculada = 0;
             deltaT = tiempoMaximoEstimado / numTrapecios;
 
@@ -28,7 +29,7 @@ public class TiempoViaje {
                 distanciaCalculada += (v1 + v2) / 2 * deltaT;
             }
 
-            double error = distanciaTotal - distanciaCalculada;
+            double error = dist - distanciaCalculada;
             tiempoMaximoEstimado += error / 100;
 
             iteraciones++;
@@ -37,8 +38,9 @@ public class TiempoViaje {
         if (iteraciones == MAX_ITERACIONES) {
             System.out.println("No se pudo converger a la distancia total.");
         }
-
-        return Math.round(tiempoMaximoEstimado);
+        
+        return (tiempoMaximoEstimado );
+        
         
     }
 
