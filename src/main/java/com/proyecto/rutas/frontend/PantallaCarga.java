@@ -5,6 +5,7 @@
 package com.proyecto.rutas.frontend;
 
 import com.formdev.flatlaf.FlatLightLaf;
+import com.formdev.flatlaf.extras.FlatSVGIcon;
 import java.awt.Color;
 import static java.lang.Thread.sleep;
 import java.util.logging.Level;
@@ -26,18 +27,18 @@ public class PantallaCarga extends javax.swing.JFrame {
        setLocationRelativeTo(null);
        
         initComponents();
-        BarraInicio.setBackground(new Color(91, 121, 235));
+        BarraInicio.setBackground(new Color(61,141,254));
         BarraInicio.setUI(new BasicProgressBarUI() {
             @Override
             protected Color getSelectionBackground() {
-                return new Color(91, 121, 235);
+                return new Color(61,141,254);
             }
         });
         BarraInicio.setForeground(new Color(255,255,255)); 
    
         
         t1 = new pbThead((JProgressBar) BarraInicio);
-        t1.start();
+        
     }
     
         class pbThead extends Thread {
@@ -112,62 +113,59 @@ public class PantallaCarga extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         BarraInicio = new javax.swing.JProgressBar();
         valores = new javax.swing.JLabel();
         mensaje = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(61, 141, 254));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.add(BarraInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 500, 770, 20));
 
-        valores.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        valores.setForeground(new java.awt.Color(0, 0, 0));
-        valores.setText("jLabel1");
+        valores.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        valores.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(valores, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 460, 50, 30));
 
-        mensaje.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        mensaje.setForeground(new java.awt.Color(0, 0, 0));
-        mensaje.setText("jLabel1");
+        mensaje.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        mensaje.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(mensaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 470, 320, 20));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(mensaje)
-                .addGap(365, 365, 365)
-                .addComponent(valores))
-            .addComponent(BarraInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 730, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(400, 400, 400)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(mensaje)
-                    .addComponent(valores))
-                .addGap(26, 26, 26)
-                .addComponent(BarraInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        jLabel2.setFont(new java.awt.Font("Arial", 3, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Tecnología que protege");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 260, 350, 70));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(37, 37, 37))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        jButton1.setBackground(new java.awt.Color(204, 204, 0));
+        jButton1.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Comenzar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 400, 130, 40));
+
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setIcon(new FlatSVGIcon(getClass().getResource("/com/proyecto/rutas/frontend/iconos/rute.svg")));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 770, 240));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 522));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        t1.start();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -192,6 +190,10 @@ public class PantallaCarga extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JProgressBar BarraInicio;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel mensaje;
     private javax.swing.JLabel valores;
